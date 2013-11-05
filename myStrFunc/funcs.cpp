@@ -75,8 +75,22 @@ namespace lnn
          if ( *(str + i) == c ) return true;
       return false;
    }
-   bool compare( const char *lhs, const char *rhs)
+ 　 bool compare( const char *lhs, const char *rhs)
    {
-      
+      bool find = true;
+      int idx = 0;
+
+      while( *lhs == *rhs )
+      {
+          if( !lhs[idx] && !rhs[idx] ) break;
+          if( lhs[idx] != rhs[idx] )
+          {
+             find = false; 
+             break;
+          }
+          idx++;
+      }
+      return find;
    }
+
 }
