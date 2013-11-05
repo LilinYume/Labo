@@ -79,6 +79,8 @@ namespace lnn
    {
       bool find = true;
       int idx = 0;
+      
+      if( *lhs != *rhs ) return false;
 
       while( *lhs == *rhs )
       {
