@@ -73,16 +73,15 @@ void enque( dd &dt, int value )
 }
 void deque( dd &dt, int &fetch )
 {
-	int empty, target, offset;
+	int target, offset;
 
 	if ( !dt.count )
 	{
 		cout << "Empty\n";
 		return;
 	}
-	empty = SIZE - dt.count;
 	target = dt.count - 1;
-	offset = TAIL - empty - 1;
+	offset = target - 1;
 		
 	fetch = dt.data[target];
 	
