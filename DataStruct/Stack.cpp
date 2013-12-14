@@ -83,12 +83,11 @@ void pop( dd &dt, int &fetch )
 	// 値のシフトなし
 	if (dt.count == 1)
 	{
-		dt.count--;
 		return;
 	}
 	// 値を左寄せ ～～ここからまだ～～
 	int incr = 1;
-	for (int i = 0; i < dt.count - 1; ++i)
+	for (int i = 0; i < dt.count; ++i)
 	{
 		dt.value[ HEAD + i ] = dt.value[ HEAD + incr ];
 		incr++;
