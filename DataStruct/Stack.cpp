@@ -85,7 +85,7 @@ void pop( dd &dt, int &fetch )
 	{
 		return;
 	}
-	// 値を左寄せ ～～ここからまだ～～
+	// 値を左寄せ
 	int incr = 1;
 	for (int i = 0; i < dt.count; ++i)
 	{
