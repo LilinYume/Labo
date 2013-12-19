@@ -10,6 +10,7 @@ class String
 public:
 	String( const char *str );
 	String( const String &obj );
+	char* get_val();
 	~String();
 };
 String::String( const char *str )
@@ -50,6 +51,14 @@ String::String( const String &obj )
 	for( int i = 0; i < size; i++ )
 		data[i] = obj.data[i];
 }
+char* String::get_val()
+{
+	if ( data )
+	{
+		return data;
+	}
+	return 0;
+}
 String::~String()
 {
 	delete data;
@@ -57,9 +66,6 @@ String::~String()
 
 int main()
 {
-	char *t = "abc";
-	String str1(t);
-	String str2(str1);
-
+	
 	return 0;
 }
